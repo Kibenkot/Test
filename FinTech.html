@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <title>FinTech App</title>
+    <style>
+    
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap');
+
+       @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+        *{font-family: 'Roboto', sans-serif;}
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+        }
+        .nav{
+            background: rgb(251, 245, 245);
+            height: 100vh;
+            width: 10rem;
+            padding: 2rem .5rem;
+
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        .logo-text {
+            color: black;
+            font-size: 1.5rem;
+            text-decoration: none;
+            font-weight: 700;
+        }
+        
+        .menu{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 85%;
+        }
+        .menu-top,
+        .menu-bottom{
+            display: flex;
+            flex-direction: column;
+        }
+        .menu-item{
+            text-decoration: none;
+            color: black;
+            padding: .75rem;
+            border-radius: 8px;
+            font-size: .75rem;
+          
+            transition: all .2s ease-out;
+        }
+        .menu-item:not(:Last-child){
+            margin-bottom: .5rem;
+        }
+        .menu-item i {
+            margin-right: .75rem;
+            font-size: 1.25rem;
+        }
+        .menu-item.is-active{
+         background: rgb(241, 202, 241);
+         font-weight: 700;
+        }
+        .menu-item:hover{
+            background: white;
+        }
+        .main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 11rem;
+        }
+        .horizon {
+            background: white;
+            height: 5rem;
+            display: flex;
+            flex-direction: row;
+
+        }
+        .horizon_1{
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+        }
+        .salute {
+            width: 45%;
+            display: flex;
+            align-items: center;
+        }
+        .hello {
+            font-size: 2rem;
+            font-weight: 600;
+            margin: 1rem ;
+            position: static;
+        }
+        .hand {
+        font-size: 2rem;}
+
+        .search{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .search_1{
+            background: rgb(242, 238, 238);
+            border-radius: 8px;
+            width: 350px;
+            padding: .5rem;
+            margin: 0.5rem;
+        }
+        input{
+            border: none;
+            outline: none;
+            background: none;}
+     
+        .avatar img{
+           border-radius: 50%;
+           width: 2.5rem;
+           margin: .5rem 1rem;}
+
+      .bell_1{
+        margin: 1rem;
+        position: relative;
+       }
+.bell {
+    font-size: 2rem;
+    border-radius: 50%;
+    border: 1px solid #e0d7d7;
+    position: relative;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+.punkt{
+    width: 0.5rem;
+    height: 0.5rem;
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 0.6rem;
+    left: 1.5rem;
+}     
+.card {
+   background: white;
+    width: 50%
+}
+.logo{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 1.5rem;
+    margin-bottom: 0.2rem;
+}
+.logo h6,
+.history h6{
+    color: rgb(132, 130, 130);
+}
+.card_1 {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    height: 10rem;
+}
+.card_11,
+.card_22{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card_111{
+    background: black;
+    width: 13.5rem;
+    height: 8rem;
+    border-radius: 8px;
+    position: relative;
+}
+.card_111_viol {
+    background: rgb(225, 168, 225);
+    width: 3rem;
+    height: 8rem;
+    position: absolute;
+    top: 0rem;
+    left: 11rem;
+    border-radius: 0 8px 8px 0;
+}
+.card_111_green{
+    background: rgb(201, 236, 201);
+    width: 3rem;
+    height: 8rem;
+    position: absolute;
+    top: 0rem;
+    left: 11rem;
+    border-radius: 0 8px 8px 0;  
+}
+.date {
+    transform: rotate(-90deg);
+    font-size: .8rem;
+    position: relative;
+    /*bottom:.rem;*/
+    top: 3rem;
+}
+.wifi{
+    position: relative;
+    top: 0.5rem;
+    left: 0.5rem;
+}
+.visa img{
+    width: 3.5rem; 
+}
+.visa {
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0.5rem;
+}
+p,h6 {
+    color: white;
+    margin: .1rem;
+    font-family: 'Quicksand', sans-serif;
+}
+
+a{
+    position: relative;
+    left: 25rem;
+    color: rgb(73, 71, 71);
+    font-size: 12px;
+    position: relative;
+    left: 0rem;
+}
+.button{
+    border-radius: 8px;
+    width: 50px;
+    height: 2.5px;
+    cursor: pointer;
+    padding: 1rem;
+    margin: 0.25rem;
+    display: flex;
+    align-items: center;
+    border: 1px solid #e2dbdb;
+}
+.kontakt{
+    width: 2rem;
+    height: 2rem;
+    background: #cbc5c5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.a{
+    display: flex;
+        flex-direction: row;
+        align-items: center ;
+        height: 2rem;
+        padding: 1rem;
+        border: .5px;
+       }
+
+.a2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5rem;
+    width: 20rem;
+}
+
+.a1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 20rem;
+
+}
+
+.round {
+    width: 2rem;
+    height: 2rem;
+    background: rgb(176, 173, 173);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.2rem;
+}
+ 
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}   
+.wrapper_2 {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: .5rem;
+}
+.wrapper_2a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 16rem;
+    justify-content: space-around;
+}
+
+.wrapper_2b{
+    width: 16rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.expenses{
+    height: 2rem;
+    width: 6rem;
+    background: #f1e4f1;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.income{
+    height: 2rem;
+    width: 6rem;
+    background: white;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e2dbdb;
+    cursor: pointer;
+}
+.day{
+    height: 2rem;
+    width: 2rem;
+    background: white;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;}
+
+.all{
+    height: 2rem;
+    width: 3rem;
+    background: white;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #65af64;
+    cursor: pointer;}
+
+    .graph{
+        width: 35%;
+        padding: 0 .2rem 0 .2rem;
+    }
+    .graph_graph {
+        width: 100%;
+        height: 20rem;
+        background: rgb(224 216 216);
+    }
+
+    .history{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 0.2rem;
+    }
+   .button_history {
+    width: 50px;
+    height: 2.5px;
+    cursor: pointer;
+    padding: 1rem;
+    margin: 0.25rem;
+    display: flex;
+    align-items: center;
+   }
+ .b1{
+     display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: flex-start;
+    margin: 0.5rem;
+}
+.b2 {
+    position: fixed;
+    right: 3.5rem;
+}
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+    <div class="nav">
+        <div class="logo">
+            <a href="" class="logo-text">FiiNeo.io</a>
+    </div>
+
+    <div class="menu">
+    <div class="menu-top">
+        <a href= " " class="menu-item is-active"><i class="las la-icons"></i>
+        Dashboard</a>
+        <a href= " " class="menu-item"><i class="las la-chalkboard"></i>
+        Statistics</a>
+        <a href= " " class="menu-item "><i class="las la-wallet"></i>
+        My Wallet</a>
+        <a href= " " class="menu-item "><i class="las la-exchange-alt" style="transform: rotate(-90deg);" ></i>
+        Transfer</a>
+        <a href= " " class="menu-item "><i class="las la-envelope"></i>
+        Message</a>
+        <a href= " " class="menu-item "><i class="las la-heart"></i>
+        Favorite</a>
+        <a href= " " class="menu-item "><i class="las la-user"></i>
+        Profile</a>
+    </div>
+
+    <div class="menu-bottom">
+        <a href= " " class="menu-item "><i class="las la-question-circle"></i>
+        Support</a>
+        <a href= " " class="menu-item "><i class="las la-cog"></i>
+        Settings</a>
+        <a href= " " class="menu-item "><i class="las la-sign-in-alt"></i>
+        Log out</a>
+    </div>
+    </div>
+
+    </div>
+
+
+    <div class="main">
+
+        <div class="horizon">
+            <div class="salute">
+                <a class="hello"> Hello, Rakib </a>
+                <a class="hand">👋</a>
+           </div>
+           
+           <div class="search">
+            <div class="search_1">
+            <i class="las la-search"></i>
+    <input type="text" placeholder="Search" > </div>
+
+    <div class="bell_1">
+        <div class="bell">
+            <a href="bell"></a><i class="las la-bell"></i></a>
+        </div>
+        <div class="punkt"></div>
+        </div>
+
+        <div class="avatar">
+            <img src="https://www.w3schools.com/howto/img_avatar.png
+            " alt="">
+        </div>
+        </div>
+        </div>
+
+        <div class="horizon_1">
+
+        <div class="card">
+            <div class="logo">
+                <h3>My Cards</h3>
+                <h6>Add New</h6>
+            </div>
+
+            <div class="card_1">
+                <div class="card_11">
+                    <div class="card_111">
+               
+                        <div class="visa">
+                        <img src="https://cdn.theforage.com/vinternships/companyassets/J73njM2ww2FC39c5d/TDX9hWhXEyy39nv22/1650990649129/white logo.png">
+                       <br>
+                            <p>1230 4670 4670</p>
+                            <h6>Rakib Kowshar</h6>
+
+                        </div>
+
+                        <div class="card_111_viol">
+                            <div class="wifi">
+                            <a><i class="las la-wifi" style="transform: rotate(+90deg);font-size: 2rem;" ></i></a>
+                            </div>
+                            <div class="date">
+                                <a>03/25</a>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="card_22">
+                    <div class="card_111">
+               
+                        <div class="visa">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw-zMBTX79nnHDfKgatuxu2sN4SQKrK1wVCg&amp;usqp=CAU">
+                       <br>
+                            <p>4670 4670 1230</p>
+                            <h6>Rakib Kowshar</h6>
+                        </div>
+
+                        <div class="card_111_green">
+                            <div class="wifi">
+                            <a><i class="las la-wifi" style="transform: rotate(+90deg);font-size: 2rem;" ></i></a>
+                            </div>
+                            <div class="date">
+                                <a>05/27</a>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+
+    <div class="logo">
+        <h3>Transactions</h3>
+        <h6 class="button">Month <a href=""><i class="las la-caret-down"></i></a></h6>
+    </div>
+
+    <div class="transaction">
+        
+        <div class="a">
+            <div class="a1">  
+                <div class="round">
+              <a href="" style="font-size: 1.5rem;"><i class="las la-video"></i></a>
+                 </div>
+              <h4 style="margin:.5rem;">Wedding video</h4> 
+            </div>
+
+            <div class="a2">
+                <h5 style="color: rgb(148 144 144);">Apr 06,2021</h5>
+                <h4>  &dollar; 3,000</h4>
+                <a href=""style="font-size: 1.5rem; color: rgb(148 144 144); "><i class="las la-ellipsis-v"></i></a>
+            </div>
+       </div>
+
+    <div class="a">
+        <div class="a1">  
+            <div class="round">
+          <a href="" style="font-size: 1.5rem;"><i class="las la-inbox"></i></a>
+            </div>
+          <h4 style="margin:.5rem;">Passport verification</h4>
+        </div>
+
+        <div class="a2"> 
+            <h5 style="color: rgb(148 144 144);">Apr 02,2021</h5>
+            <h4>  &dollar; 100</h4> 
+            <a href=""style="font-size: 1.5rem; color: rgb(148 144 144); "><i class="las la-ellipsis-v"></i></a>
+        </div>
+    </div>
+
+<div class="a">
+    <div class="a1">  
+        <div class="round">
+      <a href="" style="font-size: 1.5rem;"><i class="las la-image"></i></a>
+        </div>
+      <h4 style="margin:.5rem;">RK's Photography</h4>
+    </div>
+
+    <div class="a2">  
+        <h5 style="color: rgb(148 144 144);">Mar 28,2021</h5>
+        <h4>  &dollar; 470</h4> 
+        <a href=""style="font-size: 1.5rem; color: rgb(148 144 144); "><i class="las la-ellipsis-v"></i></a>
+    </div>
+</div>
+
+<div class="a">
+    <div class="a1">  
+        <div class="round">
+      <a href="" style="font-size: 1.5rem;"><i class="las la-inbox"></i></a>
+    </div>
+      <h4 style="margin:.5rem;">Passport verification</h4> 
+    </div>
+
+    <div class="a2"> 
+        <h5 style="color: rgb(148 144 144);">Apr 02,2021</h5>
+        <h4>  &dollar; 100</h4> 
+        <a href=""style="font-size: 1.5rem; color: rgb(148 144 144); "><i class="las la-ellipsis-v"></i></a>
+    </div>
+</div>
+
+<div class="a">
+    <div class="a1">  
+        <div class="round">
+      <a href="" style="font-size: 1.5rem;"><i class="las la-shopping-cart"></i></a>
+    </div>
+      <h4 style="margin:.5rem;"> Grocery Shop</h4>
+    </div>
+
+    <div class="a2">
+        <h5 style="color: rgb(148 144 144);">Mar 24,2021</h5>
+        <h4>  &dollar; 186 </h4> 
+        <a href=""style="font-size: 1.5rem; color: rgb(148 144 144); "><i class="las la-ellipsis-v"></i></a>
+    </div>
+</div>
+
+<div class="a">
+    <div class="a1">  
+        <div class="round">
+      <a href="" style="font-size: 1.5rem;"><i class="las la-ticket-alt"></i></a>
+    </div>
+      <h4 style="margin:.5rem;">Flight Ticket</h4>
+    </div>
+
+    <div class="a2">
+        <h5 style="color: rgb(148 144 144);">Mar 21,2021</h5>
+        <h4>  &dollar; 860</h4> 
+        <a href=""style="font-size: 1.5rem; color: rgb(148 144 144); "><i class="las la-ellipsis-v"></i></a>
+    </div>
+</div>
+        </div>
+        </div> 
+
+
+        <div  class="graph">
+            
+        <div class="wrapper_2">
+        <div class="wrapper_2a">
+            <div class="expenses">
+                <h4>Expenses</h4>
+            </div>
+            <div class="income">
+               <h4>Income</h4> 
+            </div>
+        </div>
+
+        <div class="wrapper_2b">
+            <div class="day">
+                <h4>D</h4>
+            </div>
+            <div>
+                <h4 class="day">M</h4>
+            </div>
+            <div>
+                <h4 class="day">W</h4>
+            </div>
+            <div>
+                <h4 class="all">All</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="graph_graph"></div>
+
+    <div class="history">
+        <h3>History</h3>
+        <h6 class="button_history">See all</h6>
+    </div>
+        
+    <div class="Transactions_graph">
+
+        <div class="b1">
+            <div class="round">
+                <a href="" style="font-size: 1.5rem;"><i class="lab la-linkedin-in"></i></a>
+            </div>
+        <div>
+          <h4 style="margin:.5rem;">Linkedin Pro</h4> 
+          <h5 style="color: rgb(148 144 144);"> 10 Mar 2021</h5>
+        </div>
+        <div class="b2">
+            <h4> - 260.80 </h4>
+        </div> 
+        </div>
+
+        <div class="b1">
+            <div class="round">
+                <a href="" style="font-size: 1.5rem;"><i class="lab la-earlybirds"></i></a>
+            </div>
+        <div>
+          <h4 style="margin:.5rem;">Figma plan</h4> 
+          <h5 style="color: rgb(148 144 144);">09 Mar 2021</h5>
+        </div>
+        <div class="b2">
+            <h4>- 126.50</h4>
+        </div> 
+        </div>
+
+        <div class="b1">
+            <div class="round">
+                <a href="" style="font-size: 1.5rem;"><i class="lab la-instagram"></i></a>
+            </div>
+        <div>
+          <h4 style="margin:.5rem;">Instagram ads</h4> 
+          <h5 style="color: rgb(148 144 144);">08 Mar 2021</h5>
+        </div>
+        <div class="b2">
+            <h4>- 108.40</h4>
+        </div> 
+        </div>
+
+        <div class="b1">
+            <div class="round">
+                <a href="" style="font-size: 1.5rem;"><i class="las la-basketball-ball"></i></a>
+            </div>
+        <div>
+          <h4 style="margin:.5rem;">Dibble Pro</h4> 
+          <h5 style="color: rgb(148 144 144);">08 Mar 2021</h5>
+        </div>
+        <div class="b2">
+            <h4>- 108.40</h4>
+        </div> 
+        </div>
+       
+                
+        </div>
+
+    </div>
+        </div>   
+        </div>
+        
+    </div>
+    </div>
+    </div>
+   
+
+
+</body>
+
+</html>

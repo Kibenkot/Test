@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Homework</title>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+     
+     <style>
+        
+*{font-family: 'Roboto', sans-serif;}
+*{ margin: 0;
+  padding: 0;
+}
+
+.icon:hover {
+    background: rgb(245, 219, 245);
+}
+
+h2 {
+    margin: 1rem;
+}
+p {
+    font-size: 15px;
+}
+    .menu {
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+        color: black;
+
+       position: fixed;
+
+       height: 1.5rem;
+       font-size: 1.2rem;
+       position: relative;
+       
+    }
+
+    .bottom {
+        position: absolute;
+        margin-top: 40rem;  
+    }
+    
+    input{
+    border: none;
+    outline: none;
+    background: none;}
+
+  .icon {
+    background: rgb(242, 238, 238);
+    border-radius: 8px;
+    width: 130px;
+    height: 12px;
+    cursor: pointer;
+    
+    padding: 1rem;
+    margin: .25rem;
+
+    display: flex;
+    align-items: center;
+    
+}
+i {
+    color: black;
+
+}
+.name_icon {
+    margin: 1rem;
+}
+.horizon {
+    display: flex;
+    align-items: flex-start;
+    width: 80%;
+    height: 3.5rem;
+    color: black;
+    position: fixed;
+    left: 300px;
+    padding: 1rem;
+
+    position: fixed;
+    top: 0%;
+}
+.hand {
+    font-size: 2rem;
+}
+.search {
+    
+    background: rgb(242, 238, 238);
+    border-radius: 8px;
+    width: 300px;
+    padding: .5rem;
+    margin: 0.5rem;
+
+}
+.bell {
+    font-size: 2rem;
+    border-radius: 50%;
+    border: 1px solid #e0d7d7;
+
+    position: relative;
+}
+.punkt{
+    width: .5rem;
+    height: .5rem;
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 1.2rem;
+    left: 23.1rem;
+}
+.avatar img{
+    border-radius: 50%;
+    width: 2.5rem;
+    margin: .5rem 1rem;
+}
+.bell_1{
+    width: 2.5rem;
+    margin: .5rem 1rem;
+}
+.horizon_1{
+    display: flex;
+    align-items: self-start;
+    position: relative;
+    left: 15rem;
+}
+.block{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: relative;
+    top: 4rem;
+    height: 85vh;
+    padding: 0.5rem;
+}
+
+.block_1{
+    width: 45%;
+    background: rgb(198, 209, 198);
+}
+
+.block_2{
+    width: 35%;
+    background: rgb(228, 212, 143);
+}
+
+</style>
+</head>
+<body>
+    <div class="wrapper">
+    <div class="menu">
+        <H2>FiiNeo.io</H2>
+
+        <div>
+        <div class="icon">
+            <div class="head">
+            <a href="/dashboard"><i class="las la-icons"></i></a>
+            </div>
+            <div class="name_icon">
+                <p>Dashboard</p> 
+            </div>
+        </div>
+
+    <div class="icon">
+        <div>
+        <a href="/statistics"><i class="las la-chalkboard"></i></a>
+        </div>
+        <div class="name_icon">
+            <p>Statistics</p> 
+        </div>
+    </div>
+
+    <div class="icon">
+        <div>
+        <a href="/my_wallet"><i class="las la-wallet"></i></a>
+        </div>
+        <div class="name_icon">
+            <p>My Wallet</p> 
+        </div>
+    </div>
+
+    <div class="icon">
+        <div>
+        <a href="/transfer"><i class="las la-exchange-alt" style="transform: rotate(-90deg);" ></i></a>
+        </div>
+        <div class="name_icon">
+            <p>Transfer</p> 
+        </div>
+    </div>
+
+    <div class="icon">
+        <div>
+        <a href="/message"><i class="las la-envelope"></i></a>
+        </div>
+        <div class="name_icon">
+            <p>Message</p> 
+        </div>
+    </div>
+
+    <div class="icon">
+        <div>
+        <a href="/favorite"><i class="las la-heart"></i></a>
+        </div>
+        <div class="name_icon">
+            <p>Favorite</p> 
+        </div>
+    </div>
+
+    <div class="icon">
+        <div>
+        <a href="/profile"><i class="las la-user"></i></a>
+        </div>
+        <div class="name_icon">
+            <p>Profile</p> 
+        </div>
+    </div>
+</div>
+
+<div class="bottom">
+
+    <div class="icon">
+        <div>
+        <a href="/support"><i class="las la-question-circle"></i></a>
+        </div>
+        <div class="name_icon">
+            <p>Support</p> 
+        </div>
+    </div>
+    
+    <div class="icon">
+        <div>
+        <a href="/settings"><i class="las la-cog"></i></a>
+        </div>
+        <div class="name_icon">
+            <p>Settings</p> 
+        </div>
+    </div>
+
+    <div class="icon">
+        <div>
+        <a href="/log_out"><i class="las la-sign-in-alt"></i></a>
+        </div>
+        <div class="name_icon">
+            <p>Log out</p> 
+        </div>
+    </div>
+
+</div>
+
+<div class="horizon">
+    <h1>Hello, Rakib</h1>
+     <span class="hand">👋</span>
+
+    <div class="horizon_1">
+     <div class="search">
+        <i class="las la-search"></i>
+    <input type="text" placeholder="Search" >
+    </div>
+  
+    <div class="bell_1">
+<div class="bell">
+    <a href="bell"></a><i class="las la-bell"></i></a>
+</div>
+<div class="punkt"></div>
+</div>
+
+<div class="avatar">
+    <img src="https://www.w3schools.com/howto/img_avatar.png
+    " alt="">
+
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="block">
+<div class="block_1">1</div>
+<div class="block_2">2</div>
+</div>
+
+
+
+</div>
+</body>
+</html>
